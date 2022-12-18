@@ -22,7 +22,8 @@ while user_choise != "Q":
     if user_choise == '4':
         print("Min temp = ", get_min_temp(temps))
     if user_choise == '5':
-        print("Sredn temp = ", get_sredn_temp(temps))
+        print("day max min temp = ", get_max_min_temp(temps))
+
     if user_choise == '6':
         filesave("список температур.txt",temps)
 
