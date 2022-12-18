@@ -4,10 +4,11 @@
 # 3 - вывод макс температуры
 # 4 - вывод мин температур
 # 5 - вывод дней, когда была макс и мин температура
+# 6 - чтение температур из файла
 # ...
 # Q - выход
 # обязательно тоже самое только в файле
-from file_funk import filesave
+from file_funk import filesave, filereadtemps
 from functions import *
 from UI import *
 temps = [543, 33, 66, 88, 22, 33]
@@ -25,5 +26,7 @@ while user_choise != "Q":
         print("day max min temp = ", get_max_min_temp(temps))
 
     if user_choise == '6':
-        filesave("список температур.txt",temps)
+        f_name=input("Введите наименование файла")
+        temps=filereadtemps(f_name)
+        print(temps)
 
